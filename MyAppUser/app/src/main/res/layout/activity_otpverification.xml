@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OTPVerification">
+
+    <!-- Title for OTP verification -->
+    <TextView
+        android:id="@+id/otpTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter OTP"
+        android:textSize="24sp"
+        android:textColor="#333333"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="80dp"
+        android:gravity="center"/>
+
+    <!-- OTP input fields (4 digits) -->
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/otpTitle">
+
+        <EditText
+            android:id="@+id/otp_digit1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/otp_input_bg"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:hint="0"/>
+
+        <EditText
+            android:id="@+id/otp_digit2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/otp_input_bg"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:hint="0"/>
+
+        <EditText
+            android:id="@+id/otp_digit3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/otp_input_bg"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:hint="0"/>
+
+        <EditText
+            android:id="@+id/otp_digit4"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/otp_input_bg"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:hint="0"/>
+    </LinearLayout>
+
+    <!-- Confirm button to verify OTP -->
+    <Button
+        android:id="@+id/btn_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@color/primaryColor"
+        android:paddingLeft="40dp"
+        android:paddingTop="15dp"
+        android:paddingRight="40dp"
+        android:paddingBottom="15dp"
+        android:text="Confirm"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout3" />
+
+    <!-- Resend OTP link -->
+    <TextView
+        android:id="@+id/resendOTP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Didn't receive OTP? Resend"
+        android:textColor="#007BFF"
+        android:textSize="16sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/btn_confirm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"/>
+
+    <!-- User information (e.g., name, phone) -->
+    <TextView
+        android:id="@+id/userInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name: John Doe\nPhone: +94771234567"
+        android:textColor="#555555"
+        android:textSize="14sp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/resendOTP"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

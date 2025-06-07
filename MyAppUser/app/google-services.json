@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "12226137523",
+    "firebase_url": "https://myapp-cfcfa-default-rtdb.firebaseio.com",
+    "project_id": "myapp-cfcfa",
+    "storage_bucket": "myapp-cfcfa.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:12226137523:android:43cfa0ef6c6a30a33c8fc6",
+        "android_client_info": {
+          "package_name": "com.example.myuser"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWrFHqz54d4WjOUN1qTwfuieofZWVzXa0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:12226137523:android:7fac80d25530c2703c8fc6",
+        "android_client_info": {
+          "package_name": "lk.shashi.myadmin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWrFHqz54d4WjOUN1qTwfuieofZWVzXa0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

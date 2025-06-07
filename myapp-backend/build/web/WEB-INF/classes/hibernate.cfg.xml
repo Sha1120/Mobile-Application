@@ -1,0 +1,33 @@
+
+
+<!DOCTYPE hibernate-configuration PUBLIC 
+    "-//Hibernate/Hibernate Configuration DTD 3.0//EN" 
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/my_app?useSSL=false&amp;allowPublicKeyRetrieval=true</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">Shashika1120</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.hikari.maximumPoolSize">20</property>
+        <property name="hibernate.hikari.idleTimeout">30000</property>
+        <property name="hibernate.hikari.connectionTimeout">30000</property>
+        <property name="hibernate.hikari.minimumIdle">5</property>     
+        <mapping class="entity.Admin"/>
+        <mapping class="entity.User"/>
+        <mapping class="entity.Cinema"/>
+        <mapping class="entity.Movie"/>
+        <mapping class="entity.Category"/>
+        <mapping class="entity.Language"/>
+        <mapping class="entity.Theater"/>
+        <mapping class="entity.Seates"/>
+        <mapping class="entity.Watchlist"/>
+        <mapping class="entity.Payment"/>
+        <mapping class="entity.Booking"/>
+        
+    </session-factory>
+</hibernate-configuration>
+

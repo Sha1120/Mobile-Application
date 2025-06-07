@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.myuser.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.example.myuser.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/nav_booking"
+        android:name="com.example.myuser.ui.bookingDetails.BookingDetailsFragment"
+        android:label="@string/menu_booking"
+        tools:layout="@layout/fragment_booking_details" />
+
+    <fragment
+        android:id="@+id/nav_logout"
+        android:name="com.example.myuser.ui.logout.LogoutFragment"
+        android:label="@string/menu_logout"
+        tools:layout="@layout/fragment_logout" />
+    <fragment
+        android:id="@+id/nav_privacy"
+        android:name="com.example.myuser.ui.privacy.PrivacyFragment"
+        android:label="@string/menu_privacy"
+        tools:layout="@layout/fragment_privacy" />
+    <fragment
+        android:id="@+id/nav_watchlist"
+        android:name="com.example.myuser.ui.watchlist.WatchListFragment"
+        android:label="@string/menu_watchlist"
+        tools:layout="@layout/fragment_watch_list" />
+</navigation>

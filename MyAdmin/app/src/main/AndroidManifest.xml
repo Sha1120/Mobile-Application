@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- Permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VISUAL_USER_SELECTED" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/cinema"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/cinema"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyAdmin">
+        <activity
+            android:name=".UpdateTheater"
+            android:exported="false" />
+        <activity
+            android:name=".AddDataToFirebaseActivity"
+            android:exported="false" /> <!-- Activities -->
+        <activity
+            android:name=".ChartJava"
+            android:exported="false" />
+        <activity
+            android:name=".WatchList"
+            android:exported="false" />
+        <activity
+            android:name=".Dashboard"
+            android:exported="false"
+            android:label="@string/title_activity_dashboard"
+            android:theme="@style/Theme.MyAdmin.NoActionBar" />
+        <activity
+            android:name=".UserRegistration"
+            android:exported="false" />
+        <activity
+            android:name=".UserLoging"
+            android:exported="false" />
+        <activity
+            android:name=".ManageLoging"
+            android:exported="false" />
+        <activity
+            android:name=".Location"
+            android:exported="false" />
+        <activity
+            android:name=".ManageTheaters"
+            android:exported="false" />
+        <activity
+            android:name=".UpdateCategory"
+            android:exported="false" />
+        <activity
+            android:name=".Update_Movie"
+            android:exported="false" />
+        <activity
+            android:name=".BookinDetails"
+            android:exported="false" />
+        <activity
+            android:name=".ManageAllMovie"
+            android:exported="false"
+            android:theme="@style/Theme.MyAdmin" />
+        <activity
+            android:name=".AddMovie"
+            android:exported="false" />
+        <activity
+            android:name=".CreateCategory"
+            android:exported="false" />
+        <activity
+            android:name=".Home2"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- File Provider -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="lk.shashi.myadmin.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider> <!-- Google Maps API Key -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="your_api_key_here" />
+
+        <service
+            android:name=".MyFirebaseMessagingService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+    </application>
+
+</manifest>
